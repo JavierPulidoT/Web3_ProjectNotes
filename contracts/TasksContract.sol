@@ -3,8 +3,12 @@
 pragma solidity ^0.8.6;
 
 contract TasksContract {
-
     uint256 public taskCounter = 0;
+
+    // function Constructor permite ejecutar la funcion cuando se ejecuta el contrato  por primera vez
+    constructor() {
+        createTask("mi primer tarea/Nota ejemplo", "tengo que hacer algo");
+    }
 
     struct Task {
         uint256 id;
@@ -16,7 +20,7 @@ contract TasksContract {
 
     mapping(uint256 => Task) public tasks;
 
-//Funcion para poder guardar tareas
+    //Funcion para poder guardar tareas
     function createTask(string memory _title, string memory _description)
         public
     {
@@ -30,5 +34,10 @@ contract TasksContract {
         taskCounter++;
     }
 
-    //  function toggleDone(){}
+    // crea/Actualizara una tarea de false a true
+    function toggleDone(uint256 _id) public {
+        Task memory _task = tasks[_id];
+        _task.done = !_task.done;
+        tasks[_id] = _task;
+    }
 }
