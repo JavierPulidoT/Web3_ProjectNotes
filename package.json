@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "lite-server": "^2.6.1"
+  },
+  "name": "web3_projectnotes",
+  "description": "Project Web3 Blockchain, DApp (Decentralized Application), to save Tasks and Notes. using Solidity, JavaScript, Ethereum Network, Wallet Metamask",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "lite-server"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierPulidoT/Web3_ProjectNotes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavierPulidoT/Web3_ProjectNotes/issues"
+  },
+  "homepage": "https://github.com/JavierPulidoT/Web3_ProjectNotes#readme"
+}
