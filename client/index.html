@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+
     <title>Dapp</title>
 </head>
 <body>
-    <h1>DApp</h1>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="card card-body rounded-0 mb-4 bg-dark">
+                    <h1>Dapp</h1>
+                    <h6 class="text-muted">Aplicacion de Ideas/Tareas Decentralizada</h6>
+                    <span>Wallet</span>
+                    <span>0x0006546sdDD98fhh9</span>
+                </div>
+                <form class="card card-body bg-dark">
+                    <h4>💡Guardar Idea</h4>
+                    <input type="text" placeholder="Escribe la idea" class="form-control">
+
+                    <textarea rows="2" class="form-control my-4" placeholder="Quiero Hacer..."></textarea>
+
+                    <button class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+            <div class="col-md-8"> 
+                <div class="card bg-dark">
+                    Lista de Ideas
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
 </body>
 </html>
