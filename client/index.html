@@ -20,11 +20,21 @@
                     <span>Wallet</span>
                     <span>0x0006546sdDD98fhh9</span>
                 </div>
-                <form class="card card-body bg-dark">
-                    <h4>💡Guardar Idea</h4>
-                    <input type="text" placeholder="Escribe la idea" class="form-control">
 
-                    <textarea rows="2" class="form-control my-4" placeholder="Quiero Hacer..."></textarea>
+                <form class="card card-body bg-dark" id="taskForm">
+                    <h4>💡Guardar Idea</h4>
+                     
+                    <input 
+                    type="text" 
+                    name="title"
+                    placeholder="Escribe la idea" 
+                    class="form-control">
+
+                    <textarea
+                     rows="2" 
+                     name="description"
+                     class="form-control my-4" 
+                     placeholder="Quiero Hacer..."></textarea>
 
                     <button class="btn btn-primary">Guardar</button>
                 </form>
@@ -37,5 +47,8 @@
         </div>
 
     </div>
+    <!--Scripts-->
+    <script src="./libs/@truffle/contract/dist/truffle-contract.min.js"></script>
     <script src="./app.js"></script>
+    <script src="./ui.js"></script>
 </html>
