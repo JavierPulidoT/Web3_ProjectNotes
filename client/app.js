@@ -4,12 +4,15 @@ App= {
     contracts: {},
     //account
 
-    init: () => {
+    init: async () => {
         console.log('Loaded')
-        App.loadEthereum()
-        App.loadAccount()
-        App.loadContracts()
+        await App.loadEthereum()
+        await App.loadAccount()
+        await App.loadContracts()
+        await App.render()  // no es funcion asincrona
+       
     },
+    
     // Function para ver si existe el obj ethereum 
     // (Ver si el usuario tiene instalado Wallet Metamask en el navegador)
     loadEthereum: async () => {
@@ -49,6 +52,12 @@ App= {
         //Contrato finalmente configurado
         App.tasksContract = await App.contracts.tasksContract.deployed()
     },
+    //Metodo para listar 
+    render: () => {
+        console.log(App.account)
+        //traer desde el document, leer un campo especifico
+        document.getElementById('account').innerText = App.account
+    },
 
     // Crear Tarea
     createTask: async (title, description) => {
@@ -59,4 +68,3 @@ App= {
     }
 }
 
-App.init()
